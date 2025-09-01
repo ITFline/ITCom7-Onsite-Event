@@ -1,0 +1,129 @@
+<style>
+  body {
+  background-color: #f8f9fa;
+  font-family: 'Sarabun', sans-serif;
+  padding-top: 75px;    /* << เพิ่ม: ดันเนื้อหาลงมาไม่ให้ถูก Header บัง */
+  padding-bottom: 100px; /* << ของเดิม: เว้นที่ให้ Footer */
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap');
+
+  .navbar-logo {
+  height: 40px; /* ขนาดโลโก้ */
+}
+.navbar-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #343a40;
+}
+.navbar-back-button {
+  min-width: 80px; /* จองพื้นที่ให้ปุ่มกลับ */
+}
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(233, 236, 239, 0.95) !important; 
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    z-index: 10; /* กำหนดให้ Footer อยู่ชั้นบนสุดเสมอ (สูงกว่า 3) */
+  }
+  
+  .card-title {
+    font-weight: bold;
+    color: #343a40;
+  }
+
+  .album-card {
+      transition: all 0.2s ease-in-out;
+  }
+
+  .album-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+  }
+
+  .album-thumbnail {
+    height: 150px;       /* กำหนดความสูงของรูปภาพหน้าปก */
+    object-fit: cover;   /* ทำให้รูปภาพเต็มพื้นที่โดยไม่เสียสัดส่วน */
+    width: 100%;
+  }
+
+  .album-thumbnail-link .album-thumbnail {
+    transition: opacity 0.2s ease-in-out; /* เพิ่มความนุ่มนวลในการเปลี่ยนแปลง */
+  }
+
+  .album-thumbnail-link:hover .album-thumbnail {
+    opacity: 0.85; /* ทำให้รูปจางลงเล็กน้อยเมื่อเมาส์ชี้ */
+    cursor: pointer;
+  }
+
+  .card-body a:hover h5.card-title {
+    color: #007bff !important; /* สีฟ้าเดียวกับปุ่มเปิดอัลบั้ม */
+    cursor: pointer; /* เปลี่ยนเป็นรูปมือ */
+  }
+
+  /* Responsive CSS Media Queries */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 1.25rem;
+    }
+    .card-text.fs-2 {
+      font-size: 1.75rem !important;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    #dashboard .col-md-6 {
+       margin-bottom: 1rem;
+    }
+  }
+
+/* --- เพิ่มสไตล์สำหรับปุ่มควบคุม Carousel --- */
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto; /* ปรับความกว้างอัตโนมัติ */
+  padding: 0.5rem; /* เพิ่มพื้นที่รอบไอคอน */
+  opacity: 0.7; /* ลดความโปร่งแสงลงเล็กน้อยเมื่อไม่ได้ Hover */
+  transition: opacity 0.15s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 0.9; /* เพิ่มความทึบเมื่อ Hover */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* เพิ่มพื้นหลังสีดำกึ่งโปร่งใส */
+  border-radius: 50%; /* ทำให้เป็นวงกลม */
+  padding: 0.5rem; /* เพิ่มขนาดของพื้นหลังวงกลม */
+}
+
+.carousel-control-prev {
+  left: 1rem; /* ชิดซ้ายมากขึ้น */
+}
+
+.carousel-control-next {
+  right: 1rem; /* ชิดขวามากขึ้น */
+}
+
+#modalImage {
+border: 10px solid #ffffff; /* กำหนดขนาด 5px และสีขาว /
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); / เพิ่มเงาเล็กน้อยเพื่อความสวยงาม */
+border-radius: 15px; /* ทำให้ขอบโค้งมน */
+}
+
+.footer a {
+  text-decoration: none; /* เอาเส้นใต้ออก */
+}
+  
+</style>
